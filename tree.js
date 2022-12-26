@@ -26,6 +26,7 @@ let timer = null; // this is used for the animations
 // get the code from the c++ file and save it in search function
 factory().then((instance) => {
     searchFunction = instance;
+    console.log("Loaded C++")
 });
 
 // Search and visualize the tree
