@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Gators</title>
+    <link href="./styles.css" rel="stylesheet">
+  </head>
+<body>
+    <div id="page">
+        <div class="module" id="menu">
+            <h1>Over 9000 Steam Reviews!</h1>
+            <hr>
+            <div id="section">
+                <h2>Menu</h2>
+                <textarea placeholder="Enter Game Title" required id="SearchBar"></textarea>
+                <button class="search" onclick="tree.searchTree()">Search</button>
+            </div>
+            <div id = "section">
+                <h2>Results:</h2>
+                <div id="line">
+                    <textarea placeholder="Postive Review"  id="Posreview" readonly></textarea>
+                    <button class="save" onclick="addReview(true)">Save</button>
+                </div>
+                <div id="line">
+                    <textarea placeholder="Negative Review"  id="Negreview" readonly></textarea>
+                    <button class="save" onclick="addReview(false)">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="module" id="visualization">
+            <h2 style="margin-top: 0%; margin-bottom: 0%; padding-bottom: 0%;">Red Black Tree (ordered map) Search</h2>
+            <canvas id="treeCanvas" width="750" height="350" style="border: 1px solid black; background-color: #171a21;"></canvas>
+            <hr>
+            <h3 style="margin-top: 0%; margin-bottom: 0%; padding-bottom: 0%;"> Comparing Red Black Tree (ordered map) Search to Hash Table (unordered map) Search </h2>
+            <hr>
+            <br> <br>
+            <div>
+                <div id = "section" style="background-color:#3c404a; display: block; padding: 5px; float: left;">
+                    Ordered Map Search Time:
+                    <p style="text-align: right;" id="orderedMapSearchTime">
+                        milliseconds
+                    </p>
+                </div>
+                <div id = "section" style="background-color:#3c404a; display: block; padding: 5px; float: left;">
+                    Unordered Map Search Time:
+                    <p style="text-align: right;" id="unorderedMapSearchTime">
+                        milliseconds
+                    </p>
+                </div>
+                <div>
+                    <img id="gameImage" src = "https://upload.wikimedia.org/wikipedia/commons/8/87/New_Steam_Logo_with_name.jpg" alt="" width="175px" height="70px">
+                </div>
+            </div>
+        </div>
+        <div class="module" id="reviews" style="display: none;">
+            <h2 style="margin-top: 0%; margin-bottom: 0%; padding-bottom: 0%;"> Reviews: </h2>
+        </div>
+        <div class="dragbar" id="rightbar"></div>
+        <div class="module" id="reviewsClick" onclick="openReviews()">
+            <strong>Click To Open Review SideBar</strong>
+        </div>
+    </div>
+    <script src="/tree_bundle.js"></script>
+
+    <script src="/reviews.js"></script>
+
+
+    <script src="/autocomplete.js"></script>
+    <script src="/dataset.js"></script>
+    <script>
+        autocomplete(gameTitles);
+    </script>
+</body>
+</html>

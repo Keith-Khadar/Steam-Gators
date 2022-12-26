@@ -1,0 +1,130 @@
+*{
+    text-align: center;
+    color: #c7d5e0;
+}
+#page{
+    display: grid;
+    grid-template-columns: 350px auto 10px 100px;
+    height: 97.25vh;
+    background-color: #c7d5e0;
+}
+textarea{
+    resize: none;
+    background-color: #171a21;
+    flex: auto;
+    font-size: 14px;
+}
+hr{
+    height: 5px;
+    background-color: #c7d5e0;
+}
+h2{
+    font-size: 32px;
+    padding: 15px;
+}
+button{
+    border-color: #4c8cb1;
+    background-color: #4c8cb1;
+    color: #c7d5e0;
+    font-size: 16px;
+    cursor: pointer;
+    flex: auto;
+
+}
+
+
+
+.module {
+    border-width: 5px;
+    border-style: solid;
+    border-color: #c7d5e0;
+    max-width: 1250px;
+    
+}
+
+#menu{
+    background-color: #2d364c;
+}
+#SearchBar{
+    position: relative;
+    display: inline-block;
+}
+.search{
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    vertical-align: top;
+}
+.autocomplete-active{
+    background-color: #848b33;
+}
+#autocomplete-suggested:hover{
+    background-color: #848b33;
+}
+
+
+#visualization{
+    background: #171a21;
+}
+img {
+    border: 5px solid #3c404a;
+    border-radius: 10px;
+}
+
+
+#reviews{
+    background-color: #1d2230;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+
+}
+#Posreview{
+    height: 100px;
+}
+#Negreview{
+    height: 100px;
+}
+#review{
+    display: flex;
+    flex-direction: row;
+    background-color: #2d364c;
+}
+#review:hover{
+    background-image: none;
+}
+
+
+.dragbar{
+    background-color: #c7d5e0;
+    cursor: col-resize;
+}
+
+
+#reviewsClick{
+    background-color: #2d364c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+
+#line{
+    display: flex;
+    flex-direction: row;
+}
+#section{
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #171a21;
+}
+
+
+
+
+
+
