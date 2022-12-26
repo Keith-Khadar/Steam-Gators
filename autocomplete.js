@@ -34,7 +34,14 @@ function autocomplete(arr){
                 suggestedText.innerHTML = "<strong>" + arr[i].substr(0,val.length) + "</strong>";
                 // Leave the other part of the text unbolded
                 suggestedText.innerHTML += arr[i].substr(val.length);
-                suggestedText.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                let stringVal = "";
+                for(c = 0; c < arr[i].length; c++){
+                    if(arr[i][c] == '\''){
+                        continue;
+                    }
+                    stringVal += arr[i][c];
+                }
+                suggestedText.innerHTML += "<input type='hidden' value='" + stringVal + "'>";
 
                 // If we click on of the options set input to that option
                 suggestedText.addEventListener("click", function(e){
